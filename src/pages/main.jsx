@@ -198,7 +198,7 @@ class main extends Component {
                 <div
                     className="modal fade"
                     id="bookTable"
-                    tabindex="-1"
+                    tabIndex="-1"
                     role="dialog"
                     aria-labelledby="bookATable"
                     aria-hidden="true"

@@ -4,20 +4,21 @@ class thumbnail extends Component {
   render() {
     return (
       <div className='col-lg-3 col-md-4 col-xs-6 thumb'>
-        <a
+        <div
           className='thumbnail'
           data-image-id=''
           data-toggle='modal'
-          data-title='First picture title'
-          data-image='https://picsum.photos/800/500?random=0'
+          data-title={this.props.title}
+          data-image={this.props.url}
           data-target='#image-gallery'
+          onClick={() => this.props.clicked(this.props.id)}
         >
           <img
             className='img-thumbnail'
-            src='https://picsum.photos/800/500?random=0'
-            alt='Another alt text'
+            src={this.props.url}
+            alt={this.props.title}
           />
-        </a>
+        </div>
       </div>
     );
   }

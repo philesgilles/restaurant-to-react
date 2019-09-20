@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import MainNavigation from './components/navbar/navbar';
 import MainPage from './pages/main';
@@ -14,12 +14,13 @@ class App extends Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <div className='container'>
+          <div className='container shadow'>
             <Header />
             <MainNavigation />
             <main className='main-content'>
               <Switch>
-                <Route exact path='/' component={MainPage} />
+                <Redirect exact from='/' to='/home' />
+                <Route path='/home' component={MainPage} />
                 <Route path='/menu' component={MenuPage} />
                 <Route path='/pictures' component={PicturesPage} />
                 <Route path='/info' component={InfoPage} />

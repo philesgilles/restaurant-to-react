@@ -60,15 +60,14 @@ class info extends Component {
                           Social:
                         </h5>
                         <p>
-                          <i className='fab fa-facebook-square fa-2x'></i>{' '}
+                          <i className='fa fa-facebook-square fa-2x'></i>{' '}
                           Facebook
                         </p>
                         <p>
-                          <i className='fab fa-twitter-square fa-2x'></i>{' '}
-                          Twitter
+                          <i className='fa fa-twitter-square fa-2x'></i> Twitter
                         </p>
                         <p>
-                          <i className='fab fa-instagram fa-2x'></i> Instagram
+                          <i className='fa fa-instagram fa-2x'></i> Instagram
                         </p>
                         <hr />
                       </div>

@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 class Navbar extends Component {
   render() {
     return (
-      <nav class='navbar navbar-expand-md navbar-dark bg-primary sticky'>
-        <a aria-label='fake link to fix button float' to='/'>
+      <nav className='navbar navbar-expand-md navbar-dark bg-primary sticky'>
+        <span aria-label='fake link to fix button float' to='/'>
           {' '}
-        </a>
+        </span>
         <button
-          class='navbar-toggler'
+          className='navbar-toggler'
           type='button'
           data-toggle='collapse'
           data-target='#navbar'
@@ -17,11 +17,11 @@ class Navbar extends Component {
           aria-expanded='false'
           aria-label='Toggle navigation'
         >
-          <span class='navbar-toggler-icon'></span>
+          <span className='navbar-toggler-icon'></span>
         </button>
-        <div class='collapse navbar-collapse' id='navbar'>
-          <div class='navbar-nav'>
-            <NavLink className='nav-item nav-link' to='/'>
+        <div className='collapse navbar-collapse' id='navbar'>
+          <div className='navbar-nav'>
+            <NavLink className='nav-item nav-link' to='/home'>
               Home
             </NavLink>
             <NavLink id='menu_link' className='nav-item nav-link' to='/menu'>
