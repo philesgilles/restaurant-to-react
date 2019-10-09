@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Thumb from '../components/pictures/thumbnail';
 import PictureModal from '../components/pictures/pictureModal';
-import Loader from '../components/loader';
 class pictures extends Component {
   state = {
     pictures: [
@@ -68,10 +67,10 @@ class pictures extends Component {
       }
     ],
     modal: {
+      id: 0,
       title: 'First picture title',
       url: 'https://picsum.photos/800/500?random=0'
-    },
-    loading: true
+    }
   };
 
   modalHandler = photoId => {
@@ -99,9 +98,7 @@ class pictures extends Component {
   };
 
   nextPictureHandler = photoId => {
-    console.log(photoId);
     const nextPicture = this.state.pictures[photoId + 1];
-    console.log(nextPicture);
     this.setState(prevState => ({
       modal: {
         ...prevState.modal,
@@ -110,50 +107,54 @@ class pictures extends Component {
         id: nextPicture.id
       }
     }));
-    console.log(this.state.modal);
   };
 
-  componentDidMount() {
-    this.setState({ loading: false });
+  handleKeyDown(e) {
+    const { id } = this.state.modal;
+    if (e.keyCode === 37) {
+      if (id === 0) return;
+      this.prevPictureHandler(id);
+    } else if (e.keyCode === 39) {
+      if (id === 11) return;
+      this.nextPictureHandler(id);
+    }
   }
 
   render() {
     return (
       <React.Fragment>
-        {this.state.loading && <Loader />}
-        {!this.state.loading && (
-          <div id='pictures'>
-            <div className='row justify-content-center mt-1 p-3'>
-              <div className='col border border-primary p-3'>
-                <h1 className='font-weight-light text-center text-lg-left'>
-                  Photo Gallery
-                </h1>
+        <div onKeyDown={e => this.handleKeyDown(e)} id='pictures'>
+          <div className='row justify-content-center mt-1 p-3'>
+            <div className='col border border-primary p-3'>
+              <h1 className='font-weight-light text-center text-lg-left'>
+                Photo Gallery
+              </h1>
 
-                <hr className='mt-2 mb-5' />
+              <hr className='mt-2 mb-5' />
 
-                <div className='row'>
-                  {this.state.pictures.map(picture => (
-                    <Thumb
-                      key={picture.id}
-                      title={picture.title}
-                      url={picture.url}
-                      id={picture.id}
-                      clicked={this.modalHandler}
-                    />
-                  ))}
-                </div>
-
-                <PictureModal
-                  title={this.state.modal.title}
-                  url={this.state.modal.url}
-                  id={this.state.modal.id}
-                  nextPic={this.nextPictureHandler}
-                  prevPic={this.prevPictureHandler}
-                />
+              <div className='row'>
+                {this.state.pictures.map(picture => (
+                  <Thumb
+                    key={picture.id}
+                    title={picture.title}
+                    url={picture.url}
+                    id={picture.id}
+                    clicked={this.modalHandler}
+                  />
+                ))}
               </div>
+
+              <PictureModal
+                title={this.state.modal.title}
+                url={this.state.modal.url}
+                id={this.state.modal.id}
+                nextPic={this.nextPictureHandler}
+                prevPic={this.prevPictureHandler}
+              />
             </div>
           </div>
-        )}
+        </div>
+        )
       </React.Fragment>
     );
   }

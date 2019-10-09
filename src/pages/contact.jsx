@@ -18,6 +18,7 @@ class contact extends Component {
                   <div className='form-group col-md-6'>
                     <label htmlFor='firstName'>Firstname</label>
                     <input
+                      required
                       type='text'
                       className='form-control'
                       id='firstName'
@@ -27,6 +28,7 @@ class contact extends Component {
                   <div className='form-group col-md-6'>
                     <label htmlFor='name'>Name</label>
                     <input
+                      required
                       type='text'
                       className='form-control'
                       id='name'
@@ -38,6 +40,7 @@ class contact extends Component {
                   <div className='form-group col-md-6'>
                     <label htmlFor='email'>Email</label>
                     <input
+                      required
                       type='email'
                       className='form-control'
                       id='email'
@@ -47,6 +50,7 @@ class contact extends Component {
                   <div className='form-group col-md-6'>
                     <label htmlFor='telephone'>Telephone</label>
                     <input
+                      required
                       type='tel'
                       className='form-control'
                       id='telephone'
