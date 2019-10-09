@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It's a modification of previous work 'restaurant-bootstrap' to work as a React application
 
 ## Available Scripts
 
