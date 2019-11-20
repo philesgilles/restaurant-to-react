@@ -3,11 +3,11 @@
  *  Built on top of Bootstrap 4 (https://getbootstrap.com)
  *  Built with the Bootstrap Theme Kit by HackerThemes (https://hackerthemes.com)
  */
-@import 'custom-variables.scss';
-@import '../bootstrap/scss/bootstrap.scss';
-@import 'custom-styles.scss';
+@import "custom-variables.scss";
+@import "../bootstrap/scss/bootstrap.scss";
+@import "custom-styles.scss";
 
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans&display=swap");
 
 #logoHeader {
   max-height: 100px;
@@ -19,10 +19,10 @@ ul {
 
 .menuText {
   p {
-    font-family: 'Abril Fatface', cursive;
+    font-family: "Abril Fatface", cursive;
     line-height: 1em;
     span {
-      font-family: 'Open Sans', cursive;
+      font-family: "Open Sans", cursive;
       font-size: 0.8em;
       font-style: italic;
       &.leadSpan {

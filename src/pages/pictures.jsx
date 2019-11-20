@@ -1,75 +1,75 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Thumb from '../components/pictures/thumbnail';
-import PictureModal from '../components/pictures/pictureModal';
+import Thumb from "../components/pictures/thumbnail";
+import PictureModal from "../components/pictures/pictureModal";
 class pictures extends Component {
   state = {
     pictures: [
       {
         id: 0,
-        title: 'First picture title',
-        url: 'https://picsum.photos/800/500?random=0'
+        title: "First picture title",
+        url: "https://picsum.photos/800/500?random=0"
       },
       {
         id: 1,
-        title: 'Second picture title',
-        url: 'https://picsum.photos/800/500?random=1'
+        title: "Second picture title",
+        url: "https://picsum.photos/800/500?random=1"
       },
       {
         id: 2,
-        title: 'Third picture title',
-        url: 'https://picsum.photos/800/500?random=2'
+        title: "Third picture title",
+        url: "https://picsum.photos/800/500?random=2"
       },
       {
         id: 3,
-        title: 'Fourth picture title',
-        url: 'https://picsum.photos/800/500?random=3'
+        title: "Fourth picture title",
+        url: "https://picsum.photos/800/500?random=3"
       },
       {
         id: 4,
-        title: 'Fifth picture title',
-        url: 'https://picsum.photos/800/500?random=4'
+        title: "Fifth picture title",
+        url: "https://picsum.photos/800/500?random=4"
       },
       {
         id: 5,
-        title: 'Sixth picture title',
-        url: 'https://picsum.photos/800/500?random=5'
+        title: "Sixth picture title",
+        url: "https://picsum.photos/800/500?random=5"
       },
       {
         id: 6,
-        title: 'Seventh picture title',
-        url: 'https://picsum.photos/800/500?random=6'
+        title: "Seventh picture title",
+        url: "https://picsum.photos/800/500?random=6"
       },
       {
         id: 7,
-        title: 'Heigth picture title',
-        url: 'https://picsum.photos/800/500?random=7'
+        title: "Heigth picture title",
+        url: "https://picsum.photos/800/500?random=7"
       },
       {
         id: 8,
-        title: 'Nineth picture title',
-        url: 'https://picsum.photos/800/500?random=8'
+        title: "Nineth picture title",
+        url: "https://picsum.photos/800/500?random=8"
       },
       {
         id: 9,
-        title: 'tenth picture title',
-        url: 'https://picsum.photos/800/500?random=9'
+        title: "tenth picture title",
+        url: "https://picsum.photos/800/500?random=9"
       },
       {
         id: 10,
-        title: 'First picture title',
-        url: 'https://picsum.photos/800/500?random=10'
+        title: "First picture title",
+        url: "https://picsum.photos/800/500?random=10"
       },
       {
         id: 11,
-        title: 'First picture title',
-        url: 'https://picsum.photos/800/500?random=11'
+        title: "First picture title",
+        url: "https://picsum.photos/800/500?random=11"
       }
     ],
     modal: {
       id: 0,
-      title: 'First picture title',
-      url: 'https://picsum.photos/800/500?random=0'
+      title: "First picture title",
+      url: "https://picsum.photos/800/500?random=0"
     }
   };
 
@@ -123,16 +123,16 @@ class pictures extends Component {
   render() {
     return (
       <React.Fragment>
-        <div onKeyDown={e => this.handleKeyDown(e)} id='pictures'>
-          <div className='row justify-content-center mt-1 p-3'>
-            <div className='col border border-primary p-3'>
-              <h1 className='font-weight-light text-center text-lg-left'>
+        <div onKeyDown={e => this.handleKeyDown(e)} id="pictures">
+          <div className="row justify-content-center mt-1 p-3">
+            <div className="col border border-primary p-3">
+              <h1 className="font-weight-light text-center text-lg-left">
                 Photo Gallery
               </h1>
 
-              <hr className='mt-2 mb-5' />
+              <hr className="mt-2 mb-5" />
 
-              <div className='row'>
+              <div className="row">
                 {this.state.pictures.map(picture => (
                   <Thumb
                     key={picture.id}
@@ -154,7 +154,6 @@ class pictures extends Component {
             </div>
           </div>
         </div>
-        )
       </React.Fragment>
     );
   }
