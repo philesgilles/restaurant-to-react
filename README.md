@@ -22,7 +22,7 @@ The project is deployed using docker-compose on http://163.172.82.216:3001/
 
 ## Fonctionalities
 
+- Added *Online shop* (with cart page): No API, all the logic go trough Redux
+- Added *Review page* fetching informations on google sheet.
+- Added *Chatbot* (still buggy as I didn't spent much time on the logic)
 - Added use of arrow keys to move between images in the gallery.
-- Added Online order shop (with cart page): No API, all the logic go trough Redux
-- Added Review page fetching informations on google sheet.
-- Added Chatbot (still buggy as I didn't spent much time on the logic)
