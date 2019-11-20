@@ -14,4 +14,4 @@ RUN npm install react-scripts@3.0.1 -g
 RUN npm audit fix
 
 # start app
-CMD ["serve", "-s", "build"]
+CMD ["npm", "start"]
